@@ -1,0 +1,197 @@
+/* Estilos básicos del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('imgIndex.jpg'); /* Cambiar a URL de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    height: 95vh; /* Ocupa el 100% de la altura de la pantalla */
+    margin: 0 auto;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el header */
+header {
+    background-color: rgb(76, 175, 80); /* Color verde sin opacidad */
+    color: white;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* 10% de la altura total */
+}
+
+
+/* Tamaño del título utilizando vh */
+header h2 {
+    font-size: 3vh; /* 3% de la altura del viewport */
+    margin: 0;
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Tamaño del texto en la navegación usando vh */
+nav ul li a {
+    font-size: 2vh; /* 2% de la altura del viewport */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffeb3b;
+    color: #333;
+}
+
+/* Ajustes para el contenido principal */
+.main-content {
+    padding: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh; /* 80% de la altura total */
+}
+
+.main-content img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Ajustes para el texto */
+.main-content h1 {
+    font-size: 2.5vh;
+    margin: 0 0 20px;
+}
+
+.main-content p {
+    font-size: 1.2vh;
+    margin: 0 0 20px;
+}
+
+footer {
+    background-color: rgb(76, 175, 80); /* Color verde */
+    color: white;
+    text-align: center; /* Centrado de texto para todo el footer */
+    padding: 2px;
+    border-radius: 0 0 8px 8px;
+    height: 5vh; /* 5% de la altura total */
+}
+
+.footer-content {
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: 100%; /* Asegura que ocupe todo el footer */
+}
+
+footer h3 {
+    font-size: 2vh; /* Tamaño de fuente del encabezado */
+    margin: 0; /* Sin margen */
+}
+
+/* Media query para pantallas grandes (desktops) */
+@media (min-width: 1020px) {
+    header h2 {
+        font-size: 2.5em;
+    }
+
+    .main-content h1 {
+        font-size: 2.5em;
+    }
+
+    .main-content p {
+        font-size: 1.2em;
+    }
+
+    nav ul li a {
+        padding: 15px 20px;
+    }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 2.5vh; /* Ajusta el tamaño para pantallas medianas */
+    }
+
+    nav ul li a {
+        font-size: 1.8vh; /* Ajusta el tamaño para pantallas medianas */
+    }
+
+    .main-content img {
+        width: 70%;
+    }
+
+    .main-content h1 {
+        font-size: 1.8em;
+    }
+
+    .main-content p {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    header h2 {
+        font-size: 2vh; /* Ajusta el tamaño para pantallas pequeñas */
+    }
+
+    nav ul li a {
+        font-size: 1.5vh; /* Ajusta el tamaño para pantallas pequeñas */
+    }
+
+    .main-content img {
+        width: 90%;
+    }
+
+    .main-content h1 {
+        font-size: 1.5em;
+    }
+
+    .main-content p {
+        font-size: 0.9em;
+    }
+}

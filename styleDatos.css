@@ -1,0 +1,164 @@
+ /* Estilos básicos del cuerpo */
+ body {
+    position: relative; /* Necesario para el posicionamiento absoluto del pseudo-elemento */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo tenga al menos el 100% de la altura de la ventana */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Pseudo-elemento para la imagen de fondo */
+body::before {
+    content: "";
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('1.avif'); /* Cambiar a URL de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Cambia este valor para ajustar la transparencia (0.0 a 1.0) */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+
+
+.container {
+    flex: 1; /* Hace que el contenedor principal ocupe el espacio disponible */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia para destacar el contenido */
+    border-radius: 8px; /* Bordes redondeados para el contenedor */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centra el contenido */
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.9); /* Fondo verde semi-transparente */
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+    display: flex;
+    justify-content: space-between;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 2.5em; /* Aumenta el tamaño del encabezado */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente del menú */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Aumenta el espacio alrededor del enlace */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffeb3b;
+    color: #333;
+}
+
+.main-content {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.main-content h1 {
+    color: #4CAF50;
+    font-size: 2.5em; /* Aumenta el tamaño del encabezado */
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    line-height: 1.6; /* Mejora el interlineado para mayor legibilidad */
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.message {
+    text-align: center;
+    margin-top: 10px;
+    color: red; /* Para el mensaje de error */
+}
+
+/* Estilos para la alerta personalizada */
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1000;
+    display: none; /* Oculto por defecto */
+    text-align: center;
+}
+
+.custom-alert button {
+    background-color: #08ca5b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(76, 175, 80); /* Color verde */
+    color: white;
+    text-align: center; /* Centrado de texto para todo el footer */
+    padding: 2px;
+    border-radius: 0 0 8px 8px;
+    height: 5vh; /* 5% de la altura total */
+}
+
+.footer-content {
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: 100%; /* Asegura que ocupe todo el footer */
+}
+
+footer h3 {
+    font-size: 2vh; /* Tamaño de fuente del encabezado */
+    margin: 0; /* Sin margen */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Cambia a bloque en dispositivos pequeños */
+        margin: 10px 0;
+    }
+
+    .main-content h1 {
+        font-size: 2em; /* Disminuye el tamaño del encabezado en dispositivos pequeños */
+    }
+
+    .main-content p {
+        font-size: 1em; /* Disminuye el tamaño del texto en dispositivos pequeños */
+    }
+}
